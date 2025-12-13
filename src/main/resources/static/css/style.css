@@ -155,7 +155,7 @@ footer hr {
     border-radius: 20px;
     padding: 20px;
     color: #faf5e9;
-    height: 250px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -166,10 +166,48 @@ footer hr {
     color: #faf5e9;
 }
 
+.project-section-normal .project-subtitle {
+    font-weight: 700;
+    color: #faf5e9;
+    font-size: 1.3rem;
+}
+
 .project-section-normal .project-description {
     font-weight: 500;
     color: #faf5e9;
     line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* View More Button */
+.btn-view-more {
+    background-color: #faf5e9;
+    color: #262a29;
+    border: 2px solid #faf5e9;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-view-more:hover {
+    background-color: transparent;
+    color: #faf5e9;
+    border-color: #faf5e9;
+}
+
+.project-section-inverted .btn-view-more {
+    background-color: #262a29;
+    color: #faf5e9;
+    border-color: #262a29;
+}
+
+.project-section-inverted .btn-view-more:hover {
+    background-color: transparent;
+    color: #262a29;
+    border-color: #262a29;
 }
 
 /* Inverted version: dark background, light card */
@@ -207,4 +245,124 @@ footer hr {
     object-fit: cover;
     margin: 20px;
     border-radius: 20px;
+}
+
+/* Project image adaptive - adjusts to card height */
+.project-image-adaptive {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+/* ============================================
+   PROBLEM INTRODUCTION CARD
+   ============================================ */
+
+.problem-intro-card {
+    background-color: #262a29;
+    margin: 20px;
+    border-radius: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.problem-intro-card .card-body {
+    color: #faf5e9;
+    font-weight: 500;
+    line-height: 1.8;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.problem-intro-subtitle {
+    font-weight: 700;
+    color: #faf5e9;
+    font-size: 1.3rem;
+}
+
+.problem-intro-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+/* ============================================
+   PROJECT FEATURES SECTION
+   ============================================ */
+
+#project-features {
+    background-color: #faf5e9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+#project-features h2 {
+    font-weight: 800;
+    color: #262a29;
+}
+
+#project-features h3 {
+    font-weight: 600;
+    color: #262a29;
+}
+
+/* Carousel Styles */
+.carousel-image {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(38, 42, 41, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(38, 42, 41, 0.8);
+}
+
+/* Features List */
+.features-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.features-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #262a29;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.features-list li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #262a29;
+    font-weight: bold;
+}
+
+/* Tech Stack */
+.tech-stack {
+    font-size: 1.15rem;
+    color: inherit;
+    font-weight: 500;
 }
