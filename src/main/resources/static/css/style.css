@@ -56,9 +56,9 @@ body{
     background-color: #262a29 !important;
 }
 
-/* Opcional: gradiente */
+/* Opcional: gradiente - más oscuro y menos pronunciado */
 .bg-gradiente-personalizado {
-    background: linear-gradient(60deg, #6d8390,#262a29) !important;
+    background: linear-gradient(60deg, #3a4548, #262a29) !important;
 }
 
 .card{
@@ -117,3 +117,94 @@ body{
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5)
 }
 */
+
+/* Footer */
+footer {
+    background-color: #262a29 !important;
+}
+
+footer a {
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+footer hr {
+    opacity: 0.25;
+}
+
+/* ============================================
+   PROJECT SECTION FRAGMENT
+   ============================================ */
+
+.project-section {
+    min-height: 300px;
+    margin-bottom: 20px;
+}
+
+/* Normal version: light background, dark card */
+.project-section-normal {
+    background-color: #faf5e9;
+}
+
+.project-section-normal .project-card {
+    background-color: #262a29;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    color: #faf5e9;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.project-section-normal .project-title {
+    font-weight: 800;
+    color: #faf5e9;
+}
+
+.project-section-normal .project-description {
+    font-weight: 500;
+    color: #faf5e9;
+    line-height: 1.6;
+}
+
+/* Inverted version: dark background, light card */
+.project-section-inverted {
+    background-color: #262a29;
+}
+
+.project-section-inverted .project-card {
+    background-color: #faf5e9;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    color: #262a29;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.project-section-inverted .project-title {
+    font-weight: 800;
+    color: #262a29;
+}
+
+.project-section-inverted .project-description {
+    font-weight: 500;
+    color: #262a29;
+    line-height: 1.6;
+}
+
+/* Project image - reusing imagen1 style */
+.project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin: 20px;
+    border-radius: 20px;
+}

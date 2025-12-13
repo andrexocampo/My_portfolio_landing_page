@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!-- 
+        Fragment for project sections
+        Parameters:
+        - title: Project title
+        - description: Project description (can include HTML)
+        - imageSrc: Path to the image
+        - imageAlt: Alt text for the image
+        - imagePosition: 'left' or 'right' - position of the image
+        - inverted: true/false - if true, uses inverted colors (dark background)
+    -->
+    <div th:fragment="project(title, description, imageSrc, imageAlt, imagePosition, inverted)"
+         th:classappend="${inverted == true} ? 'project-section-inverted' : 'project-section-normal'"
+         class="project-section">
+        <div class="row" th:classappend="${imagePosition == 'left'} ? 'flex-row-reverse' : ''">
+            <!-- Content Card -->
+            <div class="col-md-8">
+                <div class="project-card">
+                    <h2 th:if="${title != null}" th:text="${title}" class="project-title mb-3"></h2>
+                    <div th:if="${description != null}" th:utext="${description}" class="project-description"></div>
+                </div>
+            </div>
+            
+            <!-- Image -->
+            <div class="col-md-3">
+                <img th:src="@{${imageSrc}}" 
+                     th:alt="${imageAlt}" 
+                     class="project-image" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <nav th:fragment="navbar" class="navbar navbar-expand-lg bg-gradiente-personalizado">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <a class="navbar-brand me-4 text-white" th:href="@{/}">My Portfolio</a>
+                <div class="navbar-nav">
+                    <a class="nav-link text-white me-3" th:href="@{/#home}">Home</a>
+                    <a class="nav-link text-white me-3" th:href="@{/#projects}">Projects</a>
+                    <a class="nav-link text-white me-3" th:href="@{/#about-me}">About Me</a>
+                    <a class="nav-link text-white me-3" th:href="@{/#contact}">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
+
