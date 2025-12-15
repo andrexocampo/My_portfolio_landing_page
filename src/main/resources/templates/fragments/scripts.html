@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="bootstrap-scripts">
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script>
+            // Initialize Bootstrap collapse for navbar
+            document.addEventListener('DOMContentLoaded', function() {
+                var navToggler = document.querySelector('.navbar-toggler');
+                var navCollapse = document.querySelector('#navbarNav');
+                
+                if (navToggler && navCollapse) {
+                    navToggler.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        navCollapse.classList.toggle('show');
+                        var isExpanded = navCollapse.classList.contains('show');
+                        navToggler.setAttribute('aria-expanded', isExpanded);
+                    });
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
+

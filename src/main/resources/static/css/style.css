@@ -159,6 +159,9 @@ footer hr {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .project-section-normal .project-title {
@@ -225,6 +228,9 @@ footer hr {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .project-section-inverted .project-title {
@@ -620,4 +626,55 @@ footer hr {
 .contact-form .form-control:focus {
     border-color: #262a29;
     box-shadow: 0 0 0 0.2rem rgba(38, 42, 41, 0.25);
+}
+
+/* Navbar Styles - Only colors, Bootstrap handles responsive behavior */
+.bg-gradiente-personalizado .navbar-toggler {
+    border-color: rgba(250, 245, 233, 0.5);
+}
+
+.bg-gradiente-personalizado .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(250, 245, 233, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.bg-gradiente-personalizado .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(250, 245, 233, 0.25);
+}
+
+.bg-gradiente-personalizado .nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Mobile Responsive Styles for Project Cards */
+@media (max-width: 767.98px) {
+    .project-section-normal .project-card,
+    .project-section-inverted .project-card {
+        margin: 10px;
+        padding: 15px;
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .project-section-inverted .project-card {
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .project-description {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-view-more {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+        margin-top: 0.5rem;
+    }
+    
+    .project-section-normal .project-description,
+    .project-section-inverted .project-description {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
 }
