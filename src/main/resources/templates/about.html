@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head('About Me - My Portfolio')}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+    
+    <!-- About Me Section -->
+    <div class="container mt-4">
+        <div class="row mb-4 align-items-stretch">
+            <div class="col-md-4">
+                <img th:src="@{/images/profile.jpg}" class="about-image" alt="Profile picture">
+            </div>
+            <div class="col-md-8">
+                <div class="card problem-intro-card">
+                    <div class="card-body p-4">
+                        <h1 class="problem-intro-subtitle mb-4">About Me</h1>
+                        
+                        <div class="about-content-section mb-4">
+                            <h3 class="about-section-title mb-3">Introduction</h3>
+                            <p class="mb-0">
+                                [Your introduction text will go here. Write about yourself, your background, and what you do.]
+                            </p>
+                        </div>
+                        
+                        <div class="about-content-section mb-4">
+                            <h3 class="about-section-title mb-3">Skills</h3>
+                            <p class="mb-0">
+                                [List your skills here. You can organize them by category or list them in a structured way.]
+                            </p>
+                        </div>
+                        
+                        <div class="about-content-section mb-4">
+                            <h3 class="about-section-title mb-3">Experience</h3>
+                            <p class="mb-0">
+                                [Describe your professional experience. Include roles, companies, and key achievements.]
+                            </p>
+                        </div>
+                        
+                        <div class="about-content-section">
+                            <h3 class="about-section-title mb-3">Education</h3>
+                            <p class="mb-0">
+                                [List your educational background, degrees, certifications, or relevant training.]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
