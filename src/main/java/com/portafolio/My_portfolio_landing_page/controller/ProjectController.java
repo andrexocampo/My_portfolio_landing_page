@@ -1,6 +1,7 @@
 package com.portafolio.My_portfolio_landing_page.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -8,7 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class ProjectController {
     
     @GetMapping("/projects/{projectId}")
-    public String projectDetail(@PathVariable String projectId) {
+    public String projectDetail(@PathVariable String projectId, Model model) {
+        // Pasar el projectId al template para construir rutas de imágenes dinámicamente
+        model.addAttribute("projectId", projectId);
+        
         switch(projectId) {
             case "defstuf":
                 return "project-detail";
