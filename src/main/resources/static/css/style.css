@@ -11,6 +11,7 @@ body{
     background-color:#faf5e9;
     backgorund-image:url('https://cdn.pixabay.com/photo/2025/11/04/19/16/astronomy-9937087_960_720.jpg');
     font-family: 'EB Garamond', serif;
+    font-size: 1.2rem;
 }
 
 
@@ -172,14 +173,17 @@ footer hr {
 .project-section-normal .project-subtitle {
     font-weight: 700;
     color: #faf5e9;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .project-section-normal .project-description {
     font-weight: 500;
     color: #faf5e9;
     line-height: 1.6;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* View More Button */
@@ -224,7 +228,7 @@ footer hr {
     border-radius: 20px;
     padding: 20px;
     color: #262a29;
-    height: 250px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -242,6 +246,10 @@ footer hr {
     font-weight: 500;
     color: #262a29;
     line-height: 1.6;
+    font-size: 1.15rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Project image - reusing imagen1 style */
@@ -288,7 +296,7 @@ footer hr {
 .problem-intro-subtitle {
     font-weight: 700;
     color: #faf5e9;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .problem-intro-image {
@@ -365,6 +373,7 @@ footer hr {
     color: #262a29;
     font-weight: 500;
     line-height: 1.6;
+    font-size: 1.1rem;
 }
 
 .features-list li:before {
@@ -377,7 +386,7 @@ footer hr {
 
 /* Tech Stack */
 .tech-stack {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: inherit;
     font-weight: 500;
 }
@@ -472,11 +481,11 @@ footer hr {
 .project-header-title {
     font-weight: 800;
     color: #faf5e9;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 .project-header-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #faf5e9;
     font-weight: 500;
 }
@@ -524,7 +533,7 @@ footer hr {
 .content-section-text {
     padding: 20px;
     color: #262a29;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.8;
 }
 
@@ -535,7 +544,7 @@ footer hr {
 .content-section-text h2 {
     font-weight: 800;
     color: #262a29;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
 }
 
@@ -568,7 +577,7 @@ footer hr {
 }
 
 .about-section-title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: #262a29;
     margin-bottom: 0.75rem;
@@ -584,7 +593,7 @@ footer hr {
 }
 
 .contact-info-label {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #262a29;
     margin-bottom: 0.5rem;

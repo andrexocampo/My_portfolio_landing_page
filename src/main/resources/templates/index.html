@@ -26,14 +26,10 @@
                     <div class="card-body p-4">
                         <h3 class="problem-intro-subtitle mb-3">Project Justification</h3>
                         <p class="mb-0">
-                            En la actualidad el sistema educativo se enfrenta a una crisis dado el enfoque memorístico 
-                            que ha tenido durante los últimos siglos, dicho enfoque deja escasos momentos para enfrentarse 
-                            a problemas nuevos, desarrollar la intuición y ganar confianza frente a un mundo que cambia 
-                            rápidamente. La población necesita herramientas para enfrentarse al mundo moderno donde la 
-                            creatividad y la resolución de problema son habilidades cada vez más valiosas. Defstuf es una 
-                            aplicación que permite asimilar grandes cantidades de información como definiciones y teoremas 
-                            de forma eficiente, dándole así tiempo al usuario para que realice más actividades que le 
-                            permitan crecer y que le llenen.
+                            In our rapidly changing, data-overloaded world, there is an urgent need to expand our learning toolkit. 
+                            All critical thinking and problem-solving capability are built upon a solid memory foundation. This is 
+                            the purpose of Defstuf: to streamline the process of collecting and memorizing definitions and theorems, 
+                            employing specific tools--such as the integrated clipping tool--and proven methods, like spaced repetition.
                         </p>
                     </div>
                 </div>
@@ -68,12 +64,11 @@
             </div>
             <div class="col-md-6">
                 <h2 class="mb-4">Defstuf</h2>
-                <h3 class="h5 mb-3">Funcionalidades:</h3>
+                <h3 class="h5 mb-3">Features:</h3>
                 <ul class="features-list">
-                    <li>Asimilación eficiente de definiciones y teoremas</li>
-                    <li>Sistema de repetición espaciada para optimizar el aprendizaje</li>
-                    <li>Interfaz intuitiva para gestionar contenido educativo</li>
-                    <li>Plataforma para desarrollar habilidades de resolución de problemas</li>
+                    <li>Create your profile and manage: study areas, review notes for each concept, and the bibliographic sources from which you extract each one.</li>
+                    <li>Generate review notes instantly: capture and organize key concepts with the integrated clipping tool.</li>
+                    <li>Automate your review schedule: the system creates spaced repetition sessions based on scientific principles to ensure long-term knowledge retention.</li>
                 </ul>
             </div>
         </div>
@@ -85,8 +80,8 @@
                     <div class="project-card">
                         <h3 class="project-subtitle mb-3">Technologies and Architecture</h3>
                         <div class="project-description">
-                            <p class="tech-stack mb-3"><strong>Tech Stack:</strong> Java Spring Boot, Thymeleaf, MySQL, Bootstrap 5</p>
-                            <p class="mb-3">These technologies were chosen for their <strong>flexibility</strong> and <strong>maintainability</strong>. Spring Boot provides a robust and scalable ecosystem, while Thymeleaf allows efficient creation of dynamic views. MySQL ensures reliable data persistence, and Bootstrap guarantees a responsive and modern interface.</p>
+                            <p class="tech-stack mb-3"><strong>Tech Stack:</strong> JavaFX 13, MySQL 8.2 + JDBC, Git, Maven, BCrypt, MVC, DAO</p>
+                            <p class="mb-3">The application features a layered architecture, with MVC and DAO patterns, achieving a modular and flexible design that allows for the future addition of various types of concepts, such as identities, in addition to definitions and theorems. Its database is designed to be scalable, storing metrics such as study time and user response history, which opens up the possibility of implementing advanced data analysis functionalities to enhance the learning experience and the user's perspective.</p>
                             <a th:href="@{/projects/defstuf}" class="btn btn-view-more">View more</a>
                         </div>
                     </div>
@@ -112,8 +107,10 @@
                         <div class="card-body p-4">
                             <h3 class="problem-intro-subtitle problem-intro-subtitle-inverted mb-3">Project Justification</h3>
                             <p class="mb-0">
-                                Project 2 justification text. Replace this with the actual justification for your second project.
-                                Describe the problem it solves and why it's important.
+                                Manual vehicle maintenance management generates stress and potentially costly failures due to oversights. 
+                                Maintenance Manager solves this by centralizing all maintenance tasks, alerting you about upcoming due 
+                                dates, and generating clear cost statistics. It transforms the chaos of maintaining one or multiple 
+                                vehicles into control and financial foresight.
                             </p>
                         </div>
                     </div>
@@ -147,13 +144,12 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2 class="mb-4 project-2-title">Project 2 Name</h2>
+                    <h2 class="mb-4 project-2-title">Maintenance Manager</h2>
                     <h3 class="h5 mb-3 project-2-subtitle">Features:</h3>
                     <ul class="features-list features-list-inverted">
-                        <li>Feature 1 description</li>
-                        <li>Feature 2 description</li>
-                        <li>Feature 3 description</li>
-                        <li>Feature 4 description</li>
+                        <li>Centralizes your vehicle fleet information. Create an independent profile for each vehicle and access its history in an organized manner.</li>
+                        <li>Schedule and budget for upcoming maintenance. After completing each service, mark the record as finished, maintaining an accurate and up-to-date financial history.</li>
+                        <li>Stay on track with proactive alerts. The application will notify you in advance when maintenance is due, helping you plan and avoid costly oversights.</li>
                     </ul>
                 </div>
             </div>
@@ -165,8 +161,8 @@
                     <div class="project-card">
                         <h3 class="project-subtitle mb-3">Technologies and Architecture</h3>
                         <div class="project-description">
-                            <p class="tech-stack mb-3"><strong>Tech Stack:</strong> Technology 1, Technology 2, Technology 3, Technology 4</p>
-                            <p class="mb-3">These technologies were chosen for their <strong>flexibility</strong> and <strong>maintainability</strong>. Description of why these technologies were selected for project 2.</p>
+                            <p class="tech-stack mb-3"><strong>Tech Stack:</strong> Spring Framework 3.5.6, Java 21 LTS, Git, Maven, Spring Data JPA / Hibernate, Spring Security, Thymeleaf, Bootstrap 5, Chart.js, MVC, DAO</p>
+                            <p class="mb-3">A web application developed with the Spring Framework and a scalable MVC architecture. It implements Spring Security, JPA/Hibernate with MySQL, and email notifications for production. Features a modular design that facilitates the integration of data analysis.</p>
                             <a th:href="@{/projects/project2}" class="btn btn-view-more">View more</a>
                         </div>
                     </div>
@@ -192,8 +188,10 @@
                     <div class="card-body p-4">
                         <h3 class="problem-intro-subtitle mb-3">Project Justification</h3>
                         <p class="mb-0">
-                            Project 3 justification text. Replace this with the actual justification for your third project.
-                            Describe the problem it solves and why it's important.
+                            Many struggle to structure their workday, either by working non-stop or resting without a plan. 
+                            Phaselock Timer solves this by integrating time-block planning with work/rest rhythm (Pomodoro). 
+                            The app allows customization of work and break cycle durations, distributing these cycles within 
+                            a given time block to ensure maximum utilization of the period allocated to a specific task.
                         </p>
                     </div>
                 </div>
@@ -227,13 +225,12 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h2 class="mb-4">Project 3 Name</h2>
+                <h2 class="mb-4">Phaselock Timer</h2>
                 <h3 class="h5 mb-3">Features:</h3>
                 <ul class="features-list">
-                    <li>Feature 1 description</li>
-                    <li>Feature 2 description</li>
-                    <li>Feature 3 description</li>
-                    <li>Feature 4 description</li>
+                    <li>Define time for your task, start the timer, and forget about interval management. Phaselock Timer will automatically notify you when to switch between work and break.</li>
+                    <li>Configure work and break times to your needs. The app will sequentially distribute them throughout the scheduled session.</li>
+                    <li>Review the automatic planning. The application provides a clear view of how cycles have been allocated within the time you defined.</li>
                 </ul>
             </div>
         </div>
@@ -245,8 +242,8 @@
                     <div class="project-card">
                         <h3 class="project-subtitle mb-3">Technologies and Architecture</h3>
                         <div class="project-description">
-                            <p class="tech-stack mb-3"><strong>Tech Stack:</strong> Technology 1, Technology 2, Technology 3, Technology 4</p>
-                            <p class="mb-3">These technologies were chosen for their <strong>flexibility</strong> and <strong>maintainability</strong>. Description of why these technologies were selected for project 3.</p>
+                            <p class="tech-stack mb-3"><strong>Tech Stack:</strong> Spring Boot 4.0.0, Java 21 LTS, Git, WebSocket, JavaScript, RESTful API, Dependency Injection</p>
+                            <p class="mb-3">PhaseLock Timer is a full-stack productivity application built with Spring Boot 4.0 and Java 21, implementing industry-standard architectural patterns. The backend features a RESTful API design with proper separation of concerns through DTO pattern, Service Layer, and Repository pattern for data abstraction. Real-time capabilities are achieved via WebSocket (STOMP protocol) for bidirectional communication, eliminating polling overhead. The application employs dependency injection, bean validation, and comprehensive exception handling with a centralized GlobalExceptionHandler. Frontend uses vanilla JavaScript with Web Audio API and Browser Notifications for native integrations.</p>
                             <a th:href="@{/projects/project3}" class="btn btn-view-more">View more</a>
                         </div>
                     </div>
