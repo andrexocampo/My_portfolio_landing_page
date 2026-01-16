@@ -402,6 +402,81 @@ footer hr {
 }
 
 /* ============================================
+   PAGE START MARKER
+   ============================================ */
+
+.page-start-marker {
+    background-color: #262a29;
+    padding: 35px 0;
+    margin: 30px 0 0 0;
+    width: 100%;
+}
+
+.page-start-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #faf5e9, transparent);
+    margin: 0 auto;
+    opacity: 0.3;
+}
+
+/* ============================================
+   DEVELOPER SECTION
+   ============================================ */
+
+.developer-section {
+    background-color: #262a29;
+    padding: 35px 20px;
+    margin: 60px 0 20px 0;
+    width: 100%;
+}
+
+.developer-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.developer-title {
+    color: #faf5e9;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.developer-description {
+    color: #faf5e9;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.developer-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.developer-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.developer-section .btn-view-more {
+    background-color: #faf5e9;
+    color: #262a29;
+    border-color: #faf5e9;
+}
+
+.developer-section .btn-view-more:hover {
+    background-color: transparent;
+    color: #faf5e9;
+    border-color: #faf5e9;
+}
+
+/* ============================================
    PROJECT 2 DARK WRAPPER
    ============================================ */
 

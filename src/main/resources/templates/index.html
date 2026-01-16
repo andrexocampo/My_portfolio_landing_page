@@ -15,7 +15,9 @@
     </div>
     
     <!-- Main content -->
-    <div class="container mt-4" id="home">
+    <div class="container" id="home">
+        <!-- Page Start Marker -->
+        <div class="page-start-marker"></div>
         <!-- Problem Introduction Card -->
         <div class="row mb-4 align-items-stretch">
             <div class="col-md-3 d-none d-md-block">
@@ -63,7 +65,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h2 class="mb-4">Defstuf</h2>
+                <h2 class="mb-4">The solution: Defstuf</h2>
                 <h3 class="h5 mb-3">Features:</h3>
                 <ul class="features-list">
                     <li>Create your profile and manage: study areas, review notes for each concept, and the bibliographic sources from which you extract each one.</li>
@@ -144,7 +146,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2 class="mb-4 project-2-title">Maintenance Manager</h2>
+                    <h2 class="mb-4 project-2-title">The solution: Maintenance Manager</h2>
                     <h3 class="h5 mb-3 project-2-subtitle">Features:</h3>
                     <ul class="features-list features-list-inverted">
                         <li>Centralizes your vehicle fleet information. Create an independent profile for each vehicle and access its history in an organized manner.</li>
@@ -225,7 +227,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h2 class="mb-4">Phaselock Timer</h2>
+                <h2 class="mb-4">The solution: Phaselock Timer</h2>
                 <h3 class="h5 mb-3">Features:</h3>
                 <ul class="features-list">
                     <li>Define time for your task, start the timer, and forget about interval management. Phaselock Timer will automatically notify you when to switch between work and break.</li>
@@ -250,6 +252,24 @@
                 </div>
                 <div class="col-md-3 d-none d-md-block">
                     <img th:src="@{/images/balcon2.jpg}" class="project-image-adaptive" alt="Technologies">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- About Developer Section -->
+    <div class="container">
+        <div class="developer-section">
+            <div class="row align-items-stretch">
+                <div class="col-md-8">
+                    <div class="developer-content">
+                        <h2 class="developer-title mb-3">About the Developer</h2>
+                        <p class="developer-description mb-4">As a software developer, I focus on creating solutions that combine technical excellence with practical applications. My projects reflect a commitment to clean architecture, modern frameworks, and user-centered design, addressing real-world challenges through innovative software development.</p>
+                        <a th:href="@{/contact}" class="btn btn-view-more developer-btn">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-md-3 d-none d-md-block">
+                    <img th:src="@{/images/developer/developer-photo.jpg}" class="developer-image" alt="Developer">
                 </div>
             </div>
         </div>
