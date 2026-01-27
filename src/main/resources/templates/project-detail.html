@@ -6,17 +6,18 @@
     <!-- Navbar -->
     <div th:replace="~{fragments/navbar :: navbar}"></div>
     
-    <!-- Project Header -->
+    <!-- 1. Presentation card (overview) -->
     <div class="project-header-container">
         <div class="container py-2">
             <div class="project-header-card">
                 <div class="row align-items-center">
                     <div class="col-md-8">
                         <h1 class="project-header-title mb-3">Project Name</h1>
-                        <p class="project-header-subtitle">A brief description of the project</p>
+                        <p class="project-header-subtitle mb-2">Brief project description</p>
+                        <p class="project-header-stack text-light mb-0"><strong>Stack:</strong> <span class="project-stack-placeholder">[Tech stack]</span></p>
                     </div>
                     <div class="col-md-4 text-md-end">
-                        <a href="https://github.com/yourusername/defstuf" 
+                        <a th:href="@{'https://github.com/yourusername/' + ${projectId}}"
                            target="_blank" 
                            rel="noopener noreferrer" 
                            class="btn btn-github">
@@ -25,70 +26,165 @@
                             </svg>
                             View on GitHub
                         </a>
+                        <!-- Other key links per project (demo, docs, etc.) -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Content Sections -->
-    <div class="container mt-4">
-        <!-- Section 1: Image left, Text right -->
-        <div class="content-section content-section-normal mb-5 py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-5 mb-4 mb-md-0">
-                        <img th:src="@{'/images/projects/' + ${projectId} + '/detail/section1.jpg'}" 
-                             alt="Section 1 image" 
-                             class="content-section-image w-100" />
-                    </div>
-                    <div class="col-md-7">
-                        <div class="content-section-text">
-                            <h2 class="mb-3">Section Title 1</h2>
-                            <p>Content for section 1. This is where you can describe the first aspect of your project in detail.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container py-4 project-detail-body">
         
-        <!-- Section 2: Text left, Image right -->
-        <div class="content-section content-section-normal mb-5 py-4">
-            <div class="container">
-                <div class="row align-items-center flex-row-reverse">
-                    <div class="col-md-5 mb-4 mb-md-0">
-                        <img th:src="@{'/images/projects/' + ${projectId} + '/detail/section2.jpg'}" 
-                             alt="Section 2 image" 
-                             class="content-section-image w-100" />
-                    </div>
-                    <div class="col-md-7">
-                        <div class="content-section-text">
-                            <h2 class="mb-3">Section Title 2</h2>
-                            <p>Content for section 2. This is where you can describe the second aspect of your project in detail.</p>
+        <!-- 2. Executive summary -->
+        <section class="project-detail-section mb-5">
+            <h2 class="project-detail-h2 mb-3">Executive summary</h2>
+            <div class="project-detail-block">
+                <p class="project-detail-lead">[A concise paragraph: what the project is, why you built it, and the key outcome.]</p>
+                <!-- Optional image for this section: uncomment and set src per project -->
+                <!-- <div class="text-center mt-3">
+                    <img th:src="@{'/images/projects/' + ${projectId} + '/detail/resumen.jpg'}" alt="Summary" class="project-detail-img rounded" />
+                </div> -->
+            </div>
+        </section>
+
+        <!-- 3. The process: how I built it -->
+        <section class="project-detail-section mb-5">
+            <h2 class="project-detail-h2 mb-4">The process: how I built it</h2>
+            
+            <!-- 3.1 Identifying the problem -->
+            <div class="process-subsection process-section-row content-section content-section-normal mb-5 py-4">
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col-md-5 mb-4 mb-md-0 process-section-media-col">
+                            <div class="process-section-media">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/problema.jpg'}" alt="Problem context" class="content-section-image w-100" />
+                            </div>
+                        </div>
+                        <div class="col-md-7 process-section-content-col">
+                            <div class="content-section-text">
+                                <h3 class="process-subsection-title mb-3">Identifying the problem</h3>
+                                <p>[Context, observation, and the approach you chose.]</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Section 3: Image left, Text right -->
-        <div class="content-section content-section-normal mb-5 py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-5 mb-4 mb-md-0">
-                        <img th:src="@{'/images/projects/' + ${projectId} + '/detail/section3.jpg'}" 
-                             alt="Section 3 image" 
-                             class="content-section-image w-100" />
-                    </div>
-                    <div class="col-md-7">
-                        <div class="content-section-text">
-                            <h2 class="mb-3">Section Title 3</h2>
-                            <p>Content for section 3. This is where you can describe the third aspect of your project in detail.</p>
+
+            <!-- 3.2 Defining scope and tools -->
+            <div class="process-subsection process-section-row content-section content-section-normal mb-5 py-4">
+                <div class="container">
+                    <div class="row align-items-start flex-row-reverse">
+                        <div class="col-md-5 mb-4 mb-md-0 process-section-media-col">
+                            <div class="process-section-media">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/alcance.jpg'}" alt="Scope and tools" class="content-section-image w-100" />
+                            </div>
+                        </div>
+                        <div class="col-md-7 process-section-content-col">
+                            <div class="content-section-text">
+                                <h3 class="process-subsection-title mb-3">Defining scope and tools</h3>
+                                <p>[MVP goals, boundaries, and rationale for your tech choices.]</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- 3.3 Designing the architecture -->
+            <div class="process-subsection process-section-row content-section content-section-normal mb-5 py-4">
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col-md-5 mb-4 mb-md-0 process-section-media-col">
+                            <div class="process-section-media">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/arquitectura.jpg'}" alt="Architecture" class="content-section-image w-100" />
+                            </div>
+                        </div>
+                        <div class="col-md-7 process-section-content-col">
+                            <div class="content-section-text">
+                                <h3 class="process-subsection-title mb-3">Designing the architecture</h3>
+                                <p>[Design approach, key pattern or scheme used.]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3.4 Challenges during development -->
+            <div class="process-subsection process-section-row content-section content-section-normal mb-5 py-4">
+                <div class="container">
+                    <div class="row align-items-start flex-row-reverse">
+                        <div class="col-md-5 mb-4 mb-md-0 process-section-media-col">
+                            <div class="process-section-media">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/desafios.jpg'}" alt="Challenges" class="content-section-image w-100" />
+                            </div>
+                        </div>
+                        <div class="col-md-7 process-section-content-col">
+                            <div class="content-section-text">
+                                <h3 class="process-subsection-title mb-3">Challenges during development</h3>
+                                <p>[A specific technical challenge and how you solved it.]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3.5 Implementation and results -->
+            <div class="process-subsection process-section-row content-section content-section-normal mb-5 py-4">
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col-md-5 mb-4 mb-md-0 process-section-media-col">
+                            <div class="process-section-media">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementacion.jpg'}" alt="Implementation and results" class="content-section-image w-100" />
+                            </div>
+                        </div>
+                        <div class="col-md-7 process-section-content-col">
+                            <div class="content-section-text">
+                                <h3 class="process-subsection-title mb-3">Implementation and results</h3>
+                                <p>[Iterative development, final outcome, and lesson learned.]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Technologies used (detail) -->
+        <section class="project-detail-section mb-5">
+            <h2 class="project-detail-h2 mb-4">Technologies used (detail)</h2>
+            <div class="project-detail-block">
+                <div class="tech-categories">
+                    <div class="tech-category mb-4">
+                        <h4 class="tech-category-title">[Category 1, e.g. Backend]</h4>
+                        <ul class="tech-list">
+                            <li><strong>[Technology]</strong> — [Purpose in the project].</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category mb-4">
+                        <h4 class="tech-category-title">[Category 2, e.g. Frontend]</h4>
+                        <ul class="tech-list">
+                            <li><strong>[Technology]</strong> — [Purpose in the project].</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category mb-4">
+                        <h4 class="tech-category-title">[Category 3, e.g. Tools]</h4>
+                        <ul class="tech-list">
+                            <li><strong>[Technology]</strong> — [Purpose in the project].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Conclusion and learnings -->
+        <section class="project-detail-section mb-5">
+            <h2 class="project-detail-h2 mb-3">Conclusion and learnings</h2>
+            <div class="project-detail-block">
+                <p>[Final reflection: value of the project and what you learned.]</p>
+                <!-- Optional image: uncomment and set per project -->
+                <!-- <div class="text-center mt-3">
+                    <img th:src="@{'/images/projects/' + ${projectId} + '/detail/conclusion.jpg'}" alt="Conclusion" class="project-detail-img rounded" />
+                </div> -->
+            </div>
+        </section>
     </div>
     
     <!-- Footer -->
@@ -98,4 +194,3 @@
     <div th:replace="~{fragments/scripts :: bootstrap-scripts}"></div>
 </body>
 </html>
-
