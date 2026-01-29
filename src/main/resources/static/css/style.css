@@ -752,6 +752,47 @@ footer hr {
     border-radius: 20px;
 }
 
+/* Showcase carousel: larger, below Implementation and results */
+.project-detail-showcase {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+.project-detail-showcase-inner {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(38, 42, 41, 0.15);
+}
+
+.project-detail-showcase-carousel img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-detail-showcase-carousel .carousel-control-prev,
+.project-detail-showcase-carousel .carousel-control-next {
+    width: 8%;
+    opacity: 0.9;
+}
+
+.project-detail-showcase-carousel .carousel-control-prev-icon,
+.project-detail-showcase-carousel .carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(38, 42, 41, 0.6);
+    border-radius: 50%;
+}
+
+.project-detail-showcase-carousel .carousel-control-prev-icon:hover,
+.project-detail-showcase-carousel .carousel-control-next-icon:hover {
+    background-color: rgba(38, 42, 41, 0.9);
+}
+
 /* Optional image: if no img in the image column, hide it and let text use full width */
 .process-section-media-col:not(:has(img)) {
     display: none;
