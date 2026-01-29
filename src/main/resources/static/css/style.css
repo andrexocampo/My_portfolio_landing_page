@@ -669,6 +669,15 @@ footer hr {
     margin-bottom: 1rem;
 }
 
+.content-section-text code {
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+    font-size: 0.9em;
+    padding: 0.15em 0.4em;
+    background-color: rgba(38, 42, 41, 0.08);
+    border-radius: 4px;
+    color: #262a29;
+}
+
 /* Project detail: header stack */
 .project-header-stack {
     font-size: 0.95rem;
@@ -719,6 +728,28 @@ footer hr {
     font-weight: 700;
     color: #262a29;
     font-size: 1.4rem;
+}
+
+.process-design-block {
+    padding: 0 0.5rem;
+}
+
+.process-design-block-title {
+    font-weight: 700;
+    color: #262a29;
+    font-size: 1.6rem;
+}
+
+.process-subsection-subtitle {
+    font-weight: 700;
+    color: #262a29;
+    font-size: 1.2rem;
+}
+
+.process-detail-carousel .content-section-image {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 /* Optional image: if no img in the image column, hide it and let text use full width */
