@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/header :: head('Project 2 Detail - My Portfolio')}">
+<head th:replace="~{fragments/header :: head('Maintenance Manager - My Portfolio')}">
 </head>
 <body>
     <!-- Navbar -->
@@ -12,9 +12,9 @@
             <div class="project-header-card">
                 <div class="row align-items-center">
                     <div class="col-md-8">
-                        <h1 class="project-header-title mb-3">Project Name</h1>
-                        <p class="project-header-subtitle mb-2">Brief project description</p>
-                        <p class="project-header-stack text-light mb-0"><strong>Stack:</strong> <span class="project-stack-placeholder">[Tech stack]</span></p>
+                        <h1 class="project-header-title mb-3">Maintenance Manager</h1>
+                        <p class="project-header-subtitle mb-2">A web app to centralize vehicle maintenance, track upcoming services, and monitor costs for one or multiple vehicles.</p>
+                        <p class="project-header-stack text-light mb-0"><strong>Stack:</strong> <span class="project-stack-placeholder">Spring Framework 3.5.6, Java 21 LTS, Spring Data JPA/Hibernate, Spring Security, MySQL, Thymeleaf, Bootstrap 5, Chart.js, Maven, Git — MVC, DAO</span></p>
                     </div>
                     <div class="col-md-4 text-md-end">
                         <a th:href="@{'https://github.com/yourusername/' + ${projectId}}"
@@ -39,11 +39,7 @@
         <section class="project-detail-section mb-5">
             <h2 class="project-detail-h2 mb-3">Executive summary</h2>
             <div class="project-detail-block">
-                <p class="project-detail-lead">[A concise paragraph: what the project is, why you built it, and the key outcome.]</p>
-                <!-- Optional image for this section: uncomment and set src per project -->
-                <!-- <div class="text-center mt-3">
-                    <img th:src="@{'/images/projects/' + ${projectId} + '/detail/resumen.jpg'}" alt="Summary" class="project-detail-img rounded" />
-                </div> -->
+                <p class="project-detail-lead">Maintenance Manager is a web application built to simplify vehicle maintenance. It centralizes fleet data, schedules upcoming services, and sends alerts before due dates so you can plan and avoid costly oversights. The app also keeps cost history and generates clear statistics, turning maintenance chaos into something manageable and predictable.</p>
             </div>
         </section>
 
@@ -63,7 +59,7 @@
                         <div class="col-md-7 process-section-content-col">
                             <div class="content-section-text">
                                 <h3 class="process-subsection-title mb-3">Identifying the problem</h3>
-                                <p>[Context, observation, and the approach you chose.]</p>
+                                <p>Keeping track of oil changes, inspections, and other maintenance tasks by hand is stressful and easy to forget. Spreadsheets and sticky notes don't scale when you have more than one vehicle, and missed services can lead to costly breakdowns. I wanted a tool that would centralize everything, remind me when maintenance is due, and give me a clear view of spending over time.</p>
                             </div>
                         </div>
                     </div>
@@ -82,7 +78,7 @@
                         <div class="col-md-7 process-section-content-col">
                             <div class="content-section-text">
                                 <h3 class="process-subsection-title mb-3">Defining scope and tools</h3>
-                                <p>[MVP goals, boundaries, and rationale for your tech choices.]</p>
+                                <p>I chose a web app so it would be accessible from any device. Spring Boot suited the project well for a modular backend with built-in security and persistence. I used Spring Data JPA with MySQL for the database, Spring Security for authentication, and Thymeleaf with Bootstrap 5 for the UI. Chart.js handles the cost charts. Maven and Git managed dependencies and version control. For production, I added email notifications to remind users when maintenance is due.</p>
                             </div>
                         </div>
                     </div>
@@ -105,7 +101,7 @@
                             <div class="col-md-7 process-section-content-col">
                                 <div class="content-section-text">
                                     <h4 class="process-subsection-subtitle mb-3">The starting point</h4>
-                                    <p>[Initial constraints, assumptions, or references you used.]</p>
+                                    <p>I started by defining the main entities: vehicles, maintenance types, service records, and users. Once that was clear, I thought about how to present them to the user. I tried to keep the layout minimal and direct so that the most important information was easy to find and act on.</p>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +140,7 @@
                             <div class="col-md-7 process-section-content-col">
                                 <div class="content-section-text">
                                     <h4 class="process-subsection-subtitle mb-3">Designing the database</h4>
-                                    <p>[Schema, entities, relations, and main decisions. Add or remove carousel items in detail/design-database/ as needed.]</p>
+                                    <p>I started from the domain: I designed the entity classes (vehicles, maintenance types, service records, users) and their relationships—one-to-many, many-to-one—directly in Java. Once the models were clear, I relied on JPA/Hibernate to generate the schema: tables, columns, foreign keys, and indexes were created from the entity definitions.</p>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +159,7 @@
                             <div class="col-md-7 process-section-content-col">
                                 <div class="content-section-text">
                                     <h4 class="process-subsection-subtitle mb-3">Designing the architecture</h4>
-                                    <p>[Design approach, key pattern or scheme used.]</p>
+                                    <p>I adopted a layered MVC structure: controllers for HTTP and routing, services for business logic (reminders, aggregations), and Spring Data JPA repositories for persistence. Spring Security protects routes and sessions. The design is modular so that analytics or new features can be added later without changing the core.</p>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +198,7 @@
                             <div class="col-md-7 process-section-content-col">
                                 <div class="content-section-text">
                                     <h4 class="process-subsection-subtitle mb-3">Designing the UX/UI</h4>
-                                    <p>[Flows, wireframes, and UI decisions. Add or remove carousel items in detail/design-uxui/ as needed.]</p>
+                                    <p>I sketched several wireframes first and then selected the final ones. The criteria I used to choose them were simplicity and efficiency, with tables ordered by age so that the most urgent maintenance items appear first. The home page also has alert signals to remind you of upcoming due dates, notifying you weeks and days before something is due, and also flagging overdue items. Finally, I added a statistics section with relevant information such as total money spent on maintenance over the last year and budgeted cost for the coming months.</p>
                                 </div>
                             </div>
                         </div>
@@ -210,62 +206,53 @@
                 </div>
             </div>
 
-            <!-- 3.4 Implementation and results -->
-            <div class="process-subsection process-section-row content-section content-section-normal mb-5 py-4">
-                <div class="container">
-                    <div class="row align-items-start">
-                        <div class="col-md-5 mb-4 mb-md-0 process-section-media-col">
-                            <div class="process-section-media">
-                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementacion.jpg'}" alt="Implementation and results" class="content-section-image w-100" />
-                            </div>
-                        </div>
-                        <div class="col-md-7 process-section-content-col">
-                            <div class="content-section-text">
-                                <h3 class="process-subsection-title mb-3">Implementation and results</h3>
-                                <p>[Iterative development, final outcome, and lesson learned.]</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
-        <!-- 4. Technologies used (detail) -->
-        <section class="project-detail-section mb-5">
-            <h2 class="project-detail-h2 mb-4">Technologies used (detail)</h2>
-            <div class="project-detail-block">
-                <div class="tech-categories">
-                    <div class="tech-category mb-4">
-                        <h4 class="tech-category-title">[Category 1, e.g. Backend]</h4>
-                        <ul class="tech-list">
-                            <li><strong>[Technology]</strong> — [Purpose in the project].</li>
-                        </ul>
-                    </div>
-                    <div class="tech-category mb-4">
-                        <h4 class="tech-category-title">[Category 2, e.g. Frontend]</h4>
-                        <ul class="tech-list">
-                            <li><strong>[Technology]</strong> — [Purpose in the project].</li>
-                        </ul>
-                    </div>
-                    <div class="tech-category mb-4">
-                        <h4 class="tech-category-title">[Category 3, e.g. Tools]</h4>
-                        <ul class="tech-list">
-                            <li><strong>[Technology]</strong> — [Purpose in the project].</li>
-                        </ul>
+        <!-- Implementation and results: single section with large title, text, and carousel -->
+        <section class="project-detail-section project-detail-showcase-section mb-5">
+            <h2 class="project-detail-showcase-title mb-4">Implementation and results</h2>
+            <div class="project-detail-block mb-4">
+                <p>I built the project incrementally: data model and repositories first, then authentication, then CRUD for vehicles and maintenance records, and finally the reminder logic and Chart.js dashboards. Email notifications were added for production. The result is a functional web app that centralizes maintenance, alerts users in advance, and tracks costs over time. The modular architecture makes it straightforward to extend with more analytics or integrations.</p>
+            </div>
+            <div class="project-detail-showcase">
+                <div class="project-detail-showcase-inner">
+                    <div id="carouselImplementationResults" class="carousel slide project-detail-showcase-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementation-results/image1.PNG'}" class="d-block w-100" alt="Implementation 1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementation-results/image2.PNG'}" class="d-block w-100" alt="Implementation 2" />
+                            </div>
+                            <div class="carousel-item">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementation-results/image3.PNG'}" class="d-block w-100" alt="Implementation 3" />
+                            </div>
+                            <div class="carousel-item">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementation-results/image4.PNG'}" class="d-block w-100" alt="Implementation 4" />
+                            </div>
+                            <div class="carousel-item">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementation-results/image5.PNG'}" class="d-block w-100" alt="Implementation 5" />
+                            </div>
+                            <div class="carousel-item">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementation-results/image6.PNG'}" class="d-block w-100" alt="Implementation 6" />
+                            </div>
+                            <div class="carousel-item">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementation-results/image7.PNG'}" class="d-block w-100" alt="Implementation 7" />
+                            </div>
+                            <div class="carousel-item">
+                                <img th:src="@{'/images/projects/' + ${projectId} + '/detail/implementation-results/image8.PNG'}" class="d-block w-100" alt="Implementation 8" />
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselImplementationResults" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselImplementationResults" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- 5. Conclusion and learnings -->
-        <section class="project-detail-section mb-5">
-            <h2 class="project-detail-h2 mb-3">Conclusion and learnings</h2>
-            <div class="project-detail-block">
-                <p>[Final reflection: value of the project and what you learned.]</p>
-                <!-- Optional image: uncomment and set per project -->
-                <!-- <div class="text-center mt-3">
-                    <img th:src="@{'/images/projects/' + ${projectId} + '/detail/conclusion.jpg'}" alt="Conclusion" class="project-detail-img rounded" />
-                </div> -->
             </div>
         </section>
     </div>

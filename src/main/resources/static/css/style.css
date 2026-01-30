@@ -752,6 +752,18 @@ footer hr {
     border-radius: 20px;
 }
 
+/* Showcase section: separate block with large title */
+.project-detail-showcase-section {
+    margin-top: 3rem;
+}
+
+.project-detail-showcase-title {
+    font-weight: 800;
+    color: #262a29;
+    font-size: 2.25rem;
+    text-align: center;
+}
+
 /* Showcase carousel: larger, below Implementation and results */
 .project-detail-showcase {
     width: 100%;
