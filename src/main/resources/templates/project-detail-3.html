@@ -101,14 +101,14 @@
                             <div class="col-md-7 process-section-content-col">
                                 <div class="content-section-text">
                                     <h4 class="process-subsection-subtitle mb-3">The starting point</h4>
-                                    <p>[Initial constraints, assumptions, or references you used.]</p>
+                                    <p>Given the nature of this project, I started by sketching wireframes and deciding the best strategy to combine Pomodoro and time blocking in one timer. That process shaped the technologies I would need and became the starting point for researching how to implement them and for designing the architecture.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 3.3.2 Designing the database (carousel) -->
+                <!-- 3.3.2 Designing the database — temporarily hidden
                 <div class="process-subsection process-section-row content-section content-section-normal mb-5 py-4">
                     <div class="container">
                         <div class="row align-items-start flex-row-reverse">
@@ -146,6 +146,7 @@
                         </div>
                     </div>
                 </div>
+                -->
 
                 <!-- 3.3.3 Designing the architecture -->
                 <div class="process-subsection process-section-row content-section content-section-normal mb-5 py-4">
@@ -159,7 +160,7 @@
                             <div class="col-md-7 process-section-content-col">
                                 <div class="content-section-text">
                                     <h4 class="process-subsection-subtitle mb-3">Designing the architecture</h4>
-                                    <p>[Design approach, key pattern or scheme used.]</p>
+                                    <p>I started by splitting the problem into block configuration and timer execution. On the backend I kept responsibilities separate: controllers only handle HTTP, services hold the logic, repositories handle persistence, and DTOs define the API contract without exposing entities. When the UI needed live updates, I compared polling with WebSocket and went with WebSocket (STOMP) so the server could push state changes. The frontend stayed in vanilla JavaScript to keep the stack simple and to use WebSocket, the Web Audio API, and browser notifications directly.</p>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +199,7 @@
                             <div class="col-md-7 process-section-content-col">
                                 <div class="content-section-text">
                                     <h4 class="process-subsection-subtitle mb-3">Designing the UX/UI</h4>
-                                    <p>[Flows, wireframes, and UI decisions. Add or remove carousel items in detail/design-uxui/ as needed.]</p>
+                                    <p>I started by sketching wireframes by hand, then refined the flow: set the time block, choose work and break durations, start the session, and follow the prompts. The main screen shows the current phase (work or break) and the countdown. Notifications and sound cues indicate when to switch. I kept the layout minimal so the user could focus on the task rather than the interface.</p>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +213,7 @@
         <section class="project-detail-section project-detail-showcase-section mb-5">
             <h2 class="project-detail-showcase-title mb-4">Implementation and results</h2>
             <div class="project-detail-block mb-4">
-                <p>[Iterative development, final outcome, and lesson learned.]</p>
+                <p>The application was built in stages: first the backend (REST API for blocks and timer, JPA entities, services, and repositories), then the web UI that consumes that API, then WebSocket for real-time updates instead of polling, and finally notifications (sounds via Web Audio API and browser notifications when the tab is in the background). The result is a working product where the user can create and configure time blocks, run the timer with pause/resume/skip, see live countdown and phase changes, and get audible and visual alerts. All requirements from the initial spec were covered, and the codebase is structured so that new features (e.g. user accounts or persistence to a file/DB) can be added without reworking the core.</p>
             </div>
             <div class="project-detail-showcase">
                 <div class="project-detail-showcase-inner">
