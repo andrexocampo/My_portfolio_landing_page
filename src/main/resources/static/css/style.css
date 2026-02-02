@@ -636,8 +636,9 @@ footer hr {
 }
 
 .content-section-image {
-    height: 400px;
-    object-fit: cover;
+    max-height: 500px;
+    height: auto;
+    object-fit: contain;
     border-radius: 20px;
     margin: 20px 0;
 }
@@ -740,6 +741,23 @@ footer hr {
     font-size: 1.6rem;
 }
 
+/* Design process: align images to the left within their column */
+.process-design-block .process-section-media-col {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+.process-design-block .process-section-media {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.process-design-block .process-section-media img,
+.process-design-block .process-detail-carousel {
+    margin-left: 0;
+    margin-right: auto;
+}
+
 .process-subsection-subtitle {
     font-weight: 700;
     color: #262a29;
@@ -747,9 +765,73 @@ footer hr {
 }
 
 .process-detail-carousel .content-section-image {
-    height: 400px;
-    object-fit: cover;
+    max-height: 500px;
+    height: auto;
+    object-fit: contain;
     border-radius: 20px;
+}
+
+/* Design database & architecture: image below text, larger display */
+.process-design-block .process-section-media-below .process-section-media {
+    max-width: 100%;
+}
+.process-design-block .process-section-media-below .content-section-image,
+.process-design-block .process-section-media-below .process-detail-carousel .content-section-image {
+    max-height: 800px;
+    width: 100%;
+}
+.process-design-block .process-section-media-below .process-detail-carousel {
+    max-width: 100%;
+}
+
+/* Design architecture only: slightly smaller image, rounded corners via wrapper */
+.architecture-image-wrap {
+    border-radius: 20px;
+    overflow: hidden;
+    display: block;
+    line-height: 0;
+}
+.process-design-block .process-section-media--architecture .content-section-image {
+    max-height: 580px;
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+}
+
+/* Design database carousel: fixed size, images fill and crop (object-fit: cover) */
+.design-database-carousel {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.design-database-carousel .carousel,
+.design-database-carousel .carousel-inner,
+.design-database-carousel .carousel-item {
+    height: 520px;
+}
+.design-database-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.design-database-carousel .carousel-control-prev,
+.design-database-carousel .carousel-control-next {
+    width: 48px;
+    opacity: 0.85;
+}
+.design-database-carousel .carousel-control-prev:hover,
+.design-database-carousel .carousel-control-next:hover {
+    opacity: 1;
+}
+.design-database-carousel .carousel-control-prev-icon,
+.design-database-carousel .carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
 }
 
 /* Showcase section: separate block with large title */
