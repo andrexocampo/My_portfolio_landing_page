@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/header :: head('About Me - My Portfolio')}">
+<head th:replace="~{fragments/header :: head('About & Contact - My Portfolio')}">
 </head>
 <body>
     <!-- Navbar -->
@@ -44,6 +44,67 @@
                                 [List your educational background, degrees, certifications, or relevant training.]
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="container mt-5 mb-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="problem-intro-subtitle mb-4">Contact</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-6 mb-4">
+                <div class="card problem-intro-card h-100">
+                    <div class="card-body p-4">
+                        <h3 class="about-section-title mb-4">Contact Information</h3>
+                        <div class="contact-info-item mb-4">
+                            <h4 class="contact-info-label mb-2">Email</h4>
+                            <p class="mb-0"><a href="mailto:Andresocampo0412@gmail.com" class="text-decoration-none">Andresocampo0412@gmail.com</a></p>
+                        </div>
+                        <div class="contact-info-item mb-4">
+                            <h4 class="contact-info-label mb-2">Location</h4>
+                            <p class="mb-0">Medellin, Colombia</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h4 class="contact-info-label mb-2">Social</h4>
+                            <div class="contact-social-links">
+                                <a href="https://www.linkedin.com/in/andres-ocampo-49176736b/" class="contact-social-link me-3" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                                <a href="https://github.com/andrexocampo" class="contact-social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Form -->
+            <div class="col-md-6 mb-4">
+                <div class="card problem-intro-card h-100">
+                    <div class="card-body p-4">
+                        <h3 class="about-section-title mb-4">Send a Message</h3>
+                        <form class="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="your.email@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Message subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-view-more">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
