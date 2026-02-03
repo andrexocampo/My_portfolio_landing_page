@@ -8,44 +8,47 @@
     
     <!-- About Me Section -->
     <div class="container mt-4">
-        <div class="row mb-4 align-items-stretch">
-            <div class="col-md-4">
-                <img th:src="@{/images/profile.jpg}" class="about-image" alt="Profile picture">
-            </div>
-            <div class="col-md-8">
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-8 order-2 order-md-1">
                 <div class="card problem-intro-card">
                     <div class="card-body p-4">
                         <h1 class="problem-intro-subtitle mb-4">About Me</h1>
                         
                         <div class="about-content-section mb-4">
                             <h3 class="about-section-title mb-3">Introduction</h3>
+                            <p class="mb-3">
+                                I am a software developer passionate about problem-solving and collaboration. My work is characterized by assertiveness in identifying key needs in a situation and by crafting strategic, flexible solutions.
+                            </p>
                             <p class="mb-0">
-                                [Your introduction text will go here. Write about yourself, your background, and what you do.]
+                                A clear example of this is Defstuf, a Java application that centralizes tools for collecting, storing, and assimilating information—essential activities in this digital, data-heavy era.
                             </p>
                         </div>
                         
                         <div class="about-content-section mb-4">
-                            <h3 class="about-section-title mb-3">Skills</h3>
+                            <h3 class="about-section-title mb-3">Education</h3>
                             <p class="mb-0">
-                                [List your skills here. You can organize them by category or list them in a structured way.]
+                                I am also a Pure Mathematics student at the Universidad de Antioquia, which helps me keep a sharp and creative mind and has a direct impact on my ability to tackle challenging problems. The word “mathematics” means “what can be learned”; this reflects the set of study techniques that the degree develops and allows me to absorb theories and technologies very quickly.
                             </p>
                         </div>
                         
                         <div class="about-content-section mb-4">
-                            <h3 class="about-section-title mb-3">Experience</h3>
+                            <h3 class="about-section-title mb-3">Skills &amp; Interests</h3>
                             <p class="mb-0">
-                                [Describe your professional experience. Include roles, companies, and key achievements.]
+                                I am particularly interested in designing systems with robust, efficient architectures and databases. My mathematical background has me well prepared and eager to learn about data analysis and artificial intelligence.
                             </p>
                         </div>
                         
                         <div class="about-content-section">
-                            <h3 class="about-section-title mb-3">Education</h3>
+                            <h3 class="about-section-title mb-3">Experience</h3>
                             <p class="mb-0">
-                                [List your educational background, degrees, certifications, or relevant training.]
+                                My applied experience is reflected in the projects showcased on this site—from desktop applications to full-stack web apps—where I combine clean architecture, modern frameworks, and user-centered design.
                             </p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-4 order-1 order-md-2">
+                <img th:src="@{/images/developer/developer-photo.jpeg}" class="about-image" alt="Profile picture">
             </div>
         </div>
     </div>

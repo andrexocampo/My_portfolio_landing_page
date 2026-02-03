@@ -1009,6 +1009,44 @@ footer hr {
     box-shadow: 0 0 0 0.2rem rgba(38, 42, 41, 0.25);
 }
 
+/* Contact section inside dark card (About page): light text and links */
+.problem-intro-card .contact-info-label {
+    color: #faf5e9;
+}
+.problem-intro-card .contact-info-item a {
+    color: #faf5e9;
+    text-decoration: none;
+}
+.problem-intro-card .contact-info-item a:hover {
+    color: #faf5e9;
+    text-decoration: underline;
+}
+.problem-intro-card .contact-social-link {
+    color: #faf5e9;
+    border-color: #faf5e9;
+}
+.problem-intro-card .contact-social-link:hover {
+    background-color: #faf5e9;
+    color: #262a29;
+    border-color: #faf5e9;
+}
+.problem-intro-card .contact-form .form-label {
+    color: #faf5e9;
+}
+.problem-intro-card .contact-form .form-control {
+    border-color: rgba(250, 245, 233, 0.5);
+    background-color: rgba(250, 245, 233, 0.08);
+    color: #faf5e9;
+}
+.problem-intro-card .contact-form .form-control::placeholder {
+    color: rgba(250, 245, 233, 0.5);
+}
+.problem-intro-card .contact-form .form-control:focus {
+    border-color: #faf5e9;
+    box-shadow: 0 0 0 0.2rem rgba(250, 245, 233, 0.2);
+    color: #faf5e9;
+}
+
 /* Navbar Styles - Only colors, Bootstrap handles responsive behavior */
 .bg-gradiente-personalizado .navbar-toggler {
     border-color: rgba(250, 245, 233, 0.5);
